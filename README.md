@@ -11,6 +11,8 @@
 ``` 
 
 ## redux
+> 严格的单向数据流是 Redux 架构的设计核心。
+
 Action
 Reducer
 Store

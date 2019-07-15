@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 
 import './App.css';
+
+/**
+ * Reduce
+ * 返回state
+ */
 function user(state = { name: 'redux' }, action) {
   switch (action.type) {
     case 'CHANGE_NAME':
@@ -14,8 +19,8 @@ function user(state = { name: 'redux' }, action) {
 }
 
 /* 
- * Action
- * 返回一个对象
+ * Reduce
+ * 返回state
  */
 function project(state = { name: 'min-react' }, action) {
   switch (action.type) {
@@ -40,12 +45,10 @@ var store = createStore(rootReducer);
 console.log(store);
 console.log(store.getState());
 
-// function render(state = store.getState()) {
-//   var $userName = document.getElementById('userName')
-//   $userName.innerHTML = state.user.name
-// }
-// render();
-
+/**
+ * 
+ * @param {*} state 
+ */
 function inputRender(state = store.getState()) {
   var $userName = document.getElementById('userNameInput')
   $userName.innerHTML = state.user.name || '';
@@ -61,9 +64,11 @@ class App extends Component {
     })
   }
 
+  /** 处理用户输入 */
   changeUserName() {
     let $userNameInput = document.getElementById('userNameInput');
     let value = $userNameInput.value;
+    // store.dispatch(action), 发起action
     store.dispatch({
       type: 'CHANGE_USER_NAME',
       name: value
