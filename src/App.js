@@ -13,7 +13,7 @@ function user(state = { name: 'redux' }, action) {
   return state
 }
 
-/** 
+/* 
  * Action
  * 返回一个对象
  */
