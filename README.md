@@ -77,8 +77,8 @@ const reducer = function (state, action) {
 
 ## react-redux
 ### connect() 
-（1）输入逻辑【mapStateToProps】：外部的数据（即state对象）如何转换为 UI 组件的参数
-（2）输出逻辑【mapDispatchToProps】：用户发出的动作如何变为 Action 对象，从 UI 组件传出去。
+* （1）输入逻辑【mapStateToProps】：外部的数据（即state对象）如何转换为 UI 组件的参数
+* （2）输出逻辑【mapDispatchToProps】：用户发出的动作如何变为 Action 对象，从 UI 组件传出去。
 
 ### <Provider> 组件
 React-Redux 提供Provider组件，可以让容器组件拿到state
